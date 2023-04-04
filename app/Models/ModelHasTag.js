@@ -1,4 +1,5 @@
-// Category model
+// Model Has Tag Model
+
 const mongoose = require('mongoose');
 
 const modelHasTagSchema = new mongoose.Schema({

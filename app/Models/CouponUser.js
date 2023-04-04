@@ -1,4 +1,5 @@
-// Category model
+// Coupon User Model
+
 const mongoose = require('mongoose');
 
 const couponUserSchema = new mongoose.Schema({

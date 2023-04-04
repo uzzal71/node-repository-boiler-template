@@ -1,4 +1,5 @@
-// Category model
+// Delivery Charge Model
+
 const mongoose = require('mongoose');
 
 const deliveryChargeSchema = new mongoose.Schema({

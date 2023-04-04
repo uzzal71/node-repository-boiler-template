@@ -1,4 +1,5 @@
-// Category model
+// Coupon Usage Model
+
 const mongoose = require('mongoose');
 
 const couponUsageSchema = new mongoose.Schema({

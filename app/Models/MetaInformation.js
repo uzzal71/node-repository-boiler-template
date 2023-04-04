@@ -1,4 +1,5 @@
-// Category model
+// Meta Information Model
+
 const mongoose = require('mongoose');
 
 const mediaInformationSchema = new mongoose.Schema({

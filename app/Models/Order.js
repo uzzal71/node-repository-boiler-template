@@ -1,16 +1,19 @@
-// Order model
+// Order Model
+
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  products: [
-    {
-      product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
-      quantity: { type: Number, required: true },
-    },
-  ],
-  totalAmount: { type: Number, required: true },
+  order_number: { type: String, required: true },
+  user_id: { type: String, required: true },
+  shopping_address: { type: String, required: true },
+  billing_address: { type: String, required: true },
+  delivery_status: { type: String, enum: ['Paid'], required: true },
+  payment_type: { type: String, enum: ['Paid'], required: true },
+  payment_status: { type: String, enum: ['Paid'], required: true },
+  grand_total: { type: NumberDecimal, default: 0.00 },
+  total_discount: { type: NumberDecimal, default: 0.00 },
   createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
 });
 
 const Order = mongoose.model('Order', orderSchema);
