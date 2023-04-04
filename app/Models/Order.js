@@ -10,8 +10,8 @@ const orderSchema = new mongoose.Schema({
   delivery_status: { type: String, enum: ['Paid'], required: true },
   payment_type: { type: String, enum: ['Paid'], required: true },
   payment_status: { type: String, enum: ['Paid'], required: true },
-  grand_total: { type: NumberDecimal, default: 0.00 },
-  total_discount: { type: NumberDecimal, default: 0.00 },
+  grand_total: { type: mongoose.Schema.Types.Decimal128, default: 0.00 },
+  total_discount: { type: mongoose.Schema.Types.Decimal128, default: 0.00 },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });

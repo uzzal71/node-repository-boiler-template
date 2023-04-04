@@ -6,7 +6,7 @@ const deliveryChargeSchema = new mongoose.Schema({
   product_id: { type: String, required: true },
   from_unit: { type: Number, default: 0 },
   to_unit: { type: Number, default: 0 },
-  cost: { type: NumberDecimal, default: 0.00 },
+  cost: { type: mongoose.Schema.Types.Decimal128, default: 0.00 },
   type: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
