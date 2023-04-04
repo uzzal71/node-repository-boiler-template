@@ -1,0 +1,32 @@
+{
+  "name": "repository-boiler-template",
+  "version": "1.0.0",
+  "description": "Create a project consist repository design pattern",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzzal71/node-repository-boiler-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzzal71/node-repository-boiler-template/issues"
+  },
+  "homepage": "https://github.com/uzzal71/node-repository-boiler-template#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
