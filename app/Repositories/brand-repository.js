@@ -1,5 +1,5 @@
 const BaseRepository = require('./base-repository');
-const Brand = require('../models/Brand');
+const Brand = require('../Models/Brand');
 
 class BrandRepository extends BaseRepository {
   constructor() {
@@ -10,5 +10,4 @@ class BrandRepository extends BaseRepository {
     return this.model.findOne({ email });
   }
 }
-
-export default BrandRepository;
+module.exports = BrandRepository;

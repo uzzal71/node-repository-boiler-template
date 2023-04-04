@@ -1,8 +1,8 @@
 const express = require('express');
-const userController = require('./Controllers/user-controller');
-const categoryController = require('./Controllers/category-controller');
-const brandController = require('./Controllers/brand-controller');
-const orderController = require('./Controllers/order-controller');
+const userController = require('./app/Controllers/user-controller.js');
+const categoryController = require('./app/Controllers/category-controller');
+const brandController = require('./app/Controllers/brand-controller');
+const orderController = require('./app/Controllers/order-controller');
 
 const app = express();
 
@@ -12,5 +12,4 @@ app.use('/api/categories', categoryController);
 app.use('/api/brands', brandController);
 app.use('/api/orders', orderController);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+module.exports = app;
