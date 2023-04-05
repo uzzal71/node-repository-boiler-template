@@ -1,8 +1,6 @@
-const express = require('express');
 const CategoryRepository = require('../Repositories/category-repository');
 const ApiResponse = require('../Response/BaseResponse');
 
-const router = express.Router();
 const categoryRepository = new CategoryRepository();
 
 export const getAllCategory = async (req, res) => {
@@ -13,12 +11,12 @@ export const getAllCategory = async (req, res) => {
     }
   
     ApiResponse.success(res, user);
-  };
+};
   
-  export const saveCategory = async (req, res) => {
+export const saveCategory = async (req, res) => {
     const user = await categoryRepository.create(req.body);
     ApiResponse.success(res, user);
-  };
+};
   
 export const updateCategory = async (req, res) => {
     const user = await categoryRepository.update(req.params.id, req.body);
@@ -30,7 +28,7 @@ export const updateCategory = async (req, res) => {
     ApiResponse.success(res, user);
   };
   
- export const deleteCategory = async (req, res) => {
+export const deleteCategory = async (req, res) => {
     const result = await categoryRepository.delete(req.params.id);
   
     if (!result) {
@@ -38,6 +36,6 @@ export const updateCategory = async (req, res) => {
     }
   
     ApiResponse.success(res);
-  };
+};
   
   
