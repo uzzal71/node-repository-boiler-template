@@ -1,8 +1,8 @@
 const express = require('express');
-const userController = require('./app/Controllers/require-controller/user-controller.js');
-const categoryController = require('./app/Controllers/require-controller/category-controller');
-const brandController = require('./app/Controllers/require-controller/brand-controller');
-const orderController = require('./app/Controllers/require-controller/order-controller');
+const userController = require('./app/Controllers/user-controller.js');
+const categoryController = require('./app/Controllers/category-controller');
+const brandController = require('./app/Controllers/brand-controller');
+const orderController = require('./app/Controllers/order-controller');
 
 const app = express();
 
